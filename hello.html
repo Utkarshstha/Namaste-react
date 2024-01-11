@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- displaying text using HTML heading -->
+    <h1>hello world from HTML</h1>
+
+
+    <div id="root"></div>   <!-- here in this div we will append text using javascript -->
+    <script>
+        // displaying helloworld using javascript
+        
+      const heading=document.createElement("h1");   // creating h1
+      heading.innerHTML="Hello world from Javascript";
+
+      const r=document.getElementById("root");
+      r.appendChild(heading);
+    
+    </script>
+</body>
+</html>
