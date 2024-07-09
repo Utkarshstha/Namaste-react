@@ -1,5 +1,8 @@
 // // 1st head
-const heading= React.createElement("h1", {id:"heading" ,x:"utkarsh"}, "Hello world from Reactanother");
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const heading= React.createElement("h1", {id:"heading" ,x:"utkarsh"}, "Hello world from Reactanother dev-parcel");
     const root= ReactDOM.createRoot(document.getElementById("head"));
     root.render(heading);
 

@@ -7,16 +7,12 @@
 </head>
 <body>
    
-    <h1>hello world from HTML</h1>
-    <div id="head"></div>
+    <h1>hello world from NoHTML</h1>
+    <div id="head">
+        <h1>not render</h1>
+    </div>
     <div id="head2"></div>
 
-    <script crossorigin
-     src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin 
-    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-   
     <!-- 1st way to write react is inside script -->
 <!-- <script>
     const heading= React.createElement("h1", {}, "Hello world from React");
@@ -27,8 +23,7 @@
 </script> -->
 
 <!-- 2nd way is by connecting html and js -->
-<script src= "./1streact.js"></script>
-
+<script type="module" src= "./3rdreact.js"></script>
 
 </body>
 </html>
