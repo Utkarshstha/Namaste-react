@@ -186,12 +186,17 @@ useEffect(()=>{
 }, []);
 
 const fetchData= async()=>{
-    const data= await fetch("https://dummyjson.com/recipes")
+    // const data= await fetch("https://dummyjson.com/recipes")
+    // const json= await data.json();
+    const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.3545784&lng=85.8162156&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
     const json= await data.json();
 
     // console.log(json)
-    setlistOfRest(json.recipes)
-    setfilterRest(json.recipes)
+    // setlistOfRest(json.recipes)
+    // setfilterRest(json.recipes)
+
+    setlistOfRest(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
+    setfilterRest(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
     // setlistOfRest(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
 
     
@@ -212,7 +217,7 @@ if(listOfRest.length==0){
                 />
                    
                 <button onClick={()=>{
-                    let searchList=listOfRest.filter((res)=>res.name.toLowerCase().includes(searchText.toLowerCase()))
+                    let searchList=listOfRest.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
                     setfilterRest(searchList)
                 }}>search</button>
 
@@ -220,8 +225,9 @@ if(listOfRest.length==0){
                 
                 <button className="filter-btn" onClick={()=>{
                  let filteredList=listOfRest.filter(
-                    (res)=> res.rating > 4.7 )
-                    setlistOfRest(filteredList);
+                    (res)=> res.info.avgRating> 4 )
+                    // setlistOfRest(filteredList);
+                    setfilterRest(filteredList);
             // console.log(listOfRest);
                   
                 }}
@@ -233,7 +239,7 @@ if(listOfRest.length==0){
 
             {
                      filterRest.map((restauran) =>(
-                        <ResturantCard key={restauran.id} 
+                        <ResturantCard key={restauran.info.id} 
                         resObj={restauran}/>
                      ))
 
