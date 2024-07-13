@@ -1,6 +1,7 @@
 
 body{
-  background-color: silver;
+  background-color: black;
+  color:white;
 }
 
 .header{
@@ -8,6 +9,7 @@ body{
     display:flex;
     justify-content: space-between;
     background-color: aqua;
+    color:green;
 }
 .logo{
     width:80px;
@@ -29,6 +31,7 @@ body{
     width:200px;
     height:330px;
     background-color: rgb(172, 172, 172);
+    
  
  }
  .res-card:hover{
@@ -82,4 +85,8 @@ body{
   display: flex;
   flex-wrap:wrap;
   gap:2px;
+ }
+
+ .contact{
+  background-color:blue;
  }

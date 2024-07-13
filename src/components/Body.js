@@ -2,6 +2,7 @@
 import ResturantCard from "./ResturantCard";
 import resData from "../utils/mockdata";
 import {useState,useEffect} from "react";
+
  import Shimmer from "./shimmer";
 const Body=()=>{
     let [listOfRest, setlistOfRest]=useState([])
