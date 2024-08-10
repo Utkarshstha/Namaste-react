@@ -16,6 +16,7 @@
   "author": "utkarsh shrestha",
   "license": "ISC",
   "devDependencies": {
+    "@types/react": "^18.3.3",
     "parcel": "^2.11.0",
     "process": "^0.11.10"
   },

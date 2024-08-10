@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, ReactProvider, RouterProvider, Outlet} from "react-router-dom";
 import Header from "./components/Header"
@@ -6,6 +6,8 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Cart from "./components/Cart";
+import ResturantMenu from "./components/ResturantMenu";
+import Error from './components/Error';
 
 const AppLayout=()=>{
 return(
@@ -39,8 +41,14 @@ const appRouter=createBrowserRouter([
                     path:"/cart",
                     element:<Cart/>,
                 },
+                {
+                    path:"/resturant/:resid",
+                    element:<ResturantMenu/>,
+                },
             
-        ]
+        ],
+        errorElement:<Error/>,
+
     },
 
 

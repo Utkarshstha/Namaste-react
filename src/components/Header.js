@@ -18,8 +18,8 @@ let [btnName, setbtnName]=useState("login");
                         <li><Link to="/cart">cart</Link></li>
                         <li><button className="login" onClick={()=>{
                         //   let  nName="logout";
-                        //     setbtnName(nName)
-                                 //or
+                        //     setbtnName(nName)  dont use
+                                
                         btnName=="login"
                          ?setbtnName("logout")
                          : setbtnName("login");
